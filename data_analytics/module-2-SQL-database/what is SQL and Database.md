@@ -185,3 +185,68 @@ or
 alter table employee add unique(`mobile`)
 
 ```
+
+## Drop
+
+ 1. drop is used to delete or drop a database or data structures
+ 2. drop is delete structure of database and table 
+ 3. after drop we never rollback
+
+ **Syntax**
+ ``
+ drop database databasename
+or 
+drop database db_app;
+
+drop table tablename
+or
+drop table employe
+or
+drop table users
+
+```
+## Truncate :
+
+1. truncate is used to delete or remove all data from the table
+2. truncate is used to empty all data from table
+3. after truncate we never rollback data
+
+**Syntax**
+``
+tuncate table tablename
+or
+truncate table employe
+``
+
+## Rename
+
+ 1. Rename is used to change any table name
+
+ **Syntax**
+
+ ``
+
+## revised...
+
+**Create a table tble_reviews with following column name **
+
+tble_employe
+rid
+name
+email
+phone
+rating
+comment
+
+## DML : Data manipulation Language 
+
+1. DML is used to manipulate data in table 
+2. DML is used to insert | delete | Update 
+3. DML used for manipulating language 
+
+** Queary used for DML **
+1. Insert
+2. Update
+3. Delete
+
+## How to insert
