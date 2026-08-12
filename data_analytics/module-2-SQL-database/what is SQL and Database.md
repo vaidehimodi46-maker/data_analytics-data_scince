@@ -183,70 +183,206 @@ or
 alter table employee change phone mobile bigint;
 or
 alter table employee add unique(`mobile`)
-
-```
-
-## Drop
-
- 1. drop is used to delete or drop a database or data structures
- 2. drop is delete structure of database and table 
- 3. after drop we never rollback
-
- **Syntax**
- ``
- drop database databasename
 or 
-drop database db_app;
-
-drop table tablename
-or
-drop table employe
-or
-drop table users
+alter table 
 
 ```
-## Truncate :
+## drop : 
+    
+    1. drop is used to drop any database and table structure and database structures
+    2. drop is delete structure of database and table 
+    3. after drop we never rollback structure and data
+    
+    ** syntax**
 
-1. truncate is used to delete or remove all data from the table
-2. truncate is used to empty all data from table
-3. after truncate we never rollback data
+    ```
+    drop database databasename
+    or 
+    drop database db_app;
 
-**Syntax**
-``
-tuncate table tablename
-or
-truncate table employe
-``
+    drop table tablename 
+    or
+    drop table employee
+    or
+    drop table user
 
-## Rename
+    ```
+## truncate :
 
- 1. Rename is used to change any table name
+    1. truncate is used to delete or remove all data from tables
+    2. truncate is used to empty all data from tables
+    3. after truncate we never rollback data
 
- **Syntax**
+    **syntax**
+    
+    ```
+    truncate table tablename
+    or 
+    truncate table employee
 
- ``
+    ```
+## rename:
+
+1. rename is used to change any table name
+
+** syntax **
+```
 
 ## revised...
+** create a table tbl_reviews with following column name** 
+tbl_reviews
 
-**Create a table tble_reviews with following column name **
-
-tble_employe
 rid
 name
 email
 phone
-rating
+rating - enum('*','**','***','****','*****')
 comment
 
-## DML : Data manipulation Language 
+## DML : data manipulation language
 
-1. DML is used to manipulate data in table 
-2. DML is used to insert | delete | Update 
-3. DML used for manipulating language 
+1. DML is used to manipulate data in tables
+2. DML is used to insert| delete | update data in tables
+3. DML use for manipulation of data
 
-** Queary used for DML **
-1. Insert
-2. Update
-3. Delete
+** query used in DML**
 
-## How to insert
+1. insert
+2. delete
+3. update
+
+## how to insert data in tables
+** syntax**
+
+```
+insert into tablename(columnme)values('value')
+or 
+insert into tbl_employee(name,photo,password,address,phone)VALUES('kumar','kumar.jpg','k51476','male','read,playing','150 feet ring road rajkot',646636476,'india','gujrat')
+
+
+## how can we delete data
+
+    1. all data delete from tables
+
+        ```
+        delete from tablename
+        or
+        delete from tbl_employee;
+        ```
+
+    2. delete one rows from table
+
+        ```
+        delete from tablename where id=1;
+        or
+        delete from tbl_employee where empid=1;
+
+    3. delete two rows from table
+
+        ```
+        delete from tablename where empid IN(5,6)
+        
+        ```
+
+
+    4 delete range of data from table
+
+        ```
+        delete from tablename where empid between 5,12;
+
+        ```
+    5. delete from name column data from table
+        ```
+        delete from tbl_country where cname = 'india';
+        
+        ```
+    6. delete data or rows using limit
+        ```
+        delete from tbl_country where cid > 0 limit 4;
+
+        ```
+ 
+ ##  update a data or rows
+
+    1. update rows
+        ```
+        
+        ```
+
+## DQL :
+
+    1. data query language
+    2. DQL is used  to select data or fetch data
+
+## DQL query
+
+    1. select
+
+        ```
+        ** fetch data or select data**
+        - select * from tbl_employee;
+        ```
+select * from tbl_employee;
+```
+
+- select particular one data from tables
+
+```
+select * from tbl_employee where empid=5;
+```
+
+
+- select particular alternate data  from tables
+
+```
+select * from tbl_employee where empid in (5,6,9);
+```
+
+- select particular range of data   from tables
+
+```
+select * from tbl_employee where empid between 1 and 100;
+```
+
+
+- select particular columns of  data  from tables
+
+```
+select empid,name,email from tbl_employee;
+```
+
+
+- select particular data using limit  from tables
+
+```
+select empid,name,hobby from tbl_employee where limit 3,5;
+or
+select * from tbl_country where cid limit 4,1;
+```
+
+# order by : 
+
+1. order by is used to filter data in asc and desc order
+
+```
+select * from tbl_country order by cid;
+or
+select * from tbl_country order by cid asc;
+or 
+select * from tbl_country order by cid desc;
+
+
+```
+
+# group by :
+
+1. group by is used to grouping or filters data on group of columns 
+
+```
+select sum(salary),department as sumof_salary from tbl_employee group by department;
+```
+        
+    
+
+
+
