@@ -10,7 +10,7 @@
 
 ## create a new database  
 
-    create databse food_delivery_db;
+    create database food_delivery_db;
 
 
 
