@@ -20,3 +20,4 @@
     SELECT * from products;
 
 ![alt text](<Screenshot 2026-08-14 181725.png>)
+
